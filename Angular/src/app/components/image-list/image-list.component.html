@@ -1,0 +1,55 @@
+<h1 class="page-header">Image Search</h1><br>
+<mat-card>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-sm-6">
+      <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && searchImages(query)" novalidate>
+        <mat-form-field class="searchInputWidth">
+          <input class="search" matInput placeholder="Search for images" [(ngModel)]="query" name="searchPlaces" #searchPlacesRef="ngModel"
+            required>
+          <mat-error *ngIf="searchPlacesRef.invalid">
+            Search query is <strong>required</strong>
+          </mat-error>
+        </mat-form-field><br>
+        <button mat-button class="searchButton" mat-raised-button color="primary">Find Images</button>
+      </form>
+    </div>
+    <div class="col-md-6 col-xs-6 col-sm-6">
+      <div class="logo">
+        <div id="attribution">All images provided by</div>
+        <a href="https://pixabay.com" target="_blank">
+        <img src= "../../assets/images/logo.png" class="pixabayLogo">
+      </a>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<div *ngIf="searching">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+<mat-card>
+  <h4 class="results" *ngIf="resultLabel">Results:</h4>
+  <h4 class="notFound" *ngIf="imagesFound"><span class="fa-stack fa-lg">
+    <i class="fa fa-camera fa-stack-1x"></i>
+    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+  </span> No Images Found!</h4>
+  <masonry [useImagesLoaded]="true">
+    <masonry-brick *ngFor="let image of images" class="image-container">
+      <mat-card>
+        <a href="{{ image.pageURL }}" target="_bank">
+          <mat-card-header>
+            <div class="avatar" mat-card-avatar [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
+            <mat-card-title><b>User:</b> {{ image.user }}</mat-card-title>
+          </mat-card-header>
+          <img src="{{image.webformatURL}}" mat-card-image class="piaxbayImg">
+          <mat-card-content>
+            <p><b>Tags:</b> {{ image.tags }}</p>
+            <p><b>Comments:</b> {{ image.comments }}</p>
+            <p><b>Likes:</b> {{ image.likes }}</p>
+          </mat-card-content>
+        </a>
+      </mat-card><br><br>
+    </masonry-brick>
+  </masonry>
+</mat-card>

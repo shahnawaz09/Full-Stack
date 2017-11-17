@@ -1,0 +1,60 @@
+.image-container{
+    margin:8px;
+    width: 300px;
+    min-height: 100px;
+    max-width: 300px;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+}
+
+.avatar{
+    margin-bottom: 7px;
+  }
+
+  .search{
+    height: 70px;
+    max-height: 70px;
+    font-size: 3.5em;
+    /* color: #eee; */
+  }
+
+  .searchButton{
+    background-color: #428bca;
+    color: #fff;
+    margin-top:20px;
+  }
+  .notFound{
+    color: #696969;
+  }
+  .results{
+    padding: 8px;
+    margin-bottom: 12px;
+    font-size: 3rem;
+  }
+  .pixabayLogo{
+    width:90%;
+  }
+  .logo{
+    padding-bottom: 24px;
+    text-align: center;
+    float:right;
+  }  
+  
+  #attribution{
+    display: block;
+    padding-bottom: 8px;
+    color: #565656 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: bold;
+  }
+  .header{
+    padding-bottom: 3px;
+  }
+
+  .searchInputWidth{
+    width: 60%;
+  }
+  /* mat-card{
+    min-width: 336px;
+  } */

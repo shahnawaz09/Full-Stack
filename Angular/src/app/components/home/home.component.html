@@ -1,0 +1,23 @@
+<!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+<p-growl [(value)]="msgs"></p-growl>
+<p-confirmDialog acceptLabel="OK" rejectLabel="Cancel"></p-confirmDialog>
+<h1 class="page-header">Dashboard</h1><br>
+<button type="button" mat-raised-button class="addBtn" [routerLink]="['/addEmployee']" pTooltip="Add New Record" tooltipPosition="right"><i class="fa fa-plus" aria-hidden="true"></i> ADD</button>
+<p></p>
+
+<p-dataTable [value]="employeesData" [editable]="true" [rows]="10" [paginator]="true" [pageLinks]="5" [rowsPerPageOptions]="[5,10,20,40,60,80]" [(selection)]="selectedEmployee"
+  (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)" dataKey="id" [loading]="loading" loadingIcon="fa-spinner">
+  <p-header>Employees Record</p-header>
+  <p-column [style]="{'width':'38px'}" selectionMode="single"></p-column>
+  <p-column field="id" header="ID" sortable="true" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column field="name" header="Name" [editable]="true" sortable="true" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column field="rewardPoints" header="Reward Points" [editable]="true" sortable="true" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column field="actualWorkHour" header="Actual Work Hour" [editable]="true" sortable="true" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column field="totalWorkHour" header="Total Work Hour" [editable]="true" sortable="true" [filter]="true" filterPlaceholder="Search"></p-column>
+  <p-column styleClass="col-button" header="Action">
+    <ng-template let-item="rowData" pTemplate="body">
+      <button type="button" pButton (click)="updateEmployeeData(item)" icon="fa-edit" pTooltip="Update Record" tooltipPosition="right" class="ui-button-secondary"></button>
+      <button type="button" pButton (click)="deleteEmployeeData(item)" icon="fa-remove" pTooltip="Delete Record" tooltipPosition="right" class="ui-button-secondary"></button>
+    </ng-template>
+  </p-column>
+</p-dataTable>

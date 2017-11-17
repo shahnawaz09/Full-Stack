@@ -1,0 +1,21 @@
+
+.sidebar {
+  background-color: #192532;
+  border-right: none;
+}
+.sidebar ul li a{
+  color: #f1f1f1;
+  font-size: 1.4rem;
+}
+.sidebar ul li a:hover{
+  color: #2A3F54;
+}
+.nav-sidebar > .active > a:hover{
+  color:#fff !important;
+}
+.sidebar ul li a i{
+  margin-right: 13px;
+}
+/* .sidebar {
+  display: block !important;
+} */

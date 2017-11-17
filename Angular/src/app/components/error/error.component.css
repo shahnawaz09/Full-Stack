@@ -1,0 +1,17 @@
+.backgroundImg{
+    
+    min-height:300px;
+    background-image: url('/assets/images/error02.png');
+    background-position: 99%;
+    background-repeat: no-repeat;
+}
+.backBtn{
+    background-color: #43ac6a;
+        color: #fff;
+        margin-top: 54px;
+    }
+
+h1{
+        color:#cc0000 !important;
+       
+    }

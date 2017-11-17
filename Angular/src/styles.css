@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.col-button{
+    text-align: center;
+}
+
+.mat-form-field {
+    min-height: 5.3em;
+}
+
+.main{
+  margin-top: 28px;
+}
+.ui-widget-content,.ui-widget-header,.ui-column-title{
+  color: #565656 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+.ui-datatable tbody > tr.ui-widget-content.ui-state-highlight, .ui-state-active > .ui-column-title {
+  color: #FFFFFF !important;
+}
+/* Scrollbar styling */
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-button:start:decrement,#doc ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#999;-webkit-border-radius:8px;}
+::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#999;-webkit-border-radius:8px;}
+
+body{
+  background-color: transparent!important;
+  color: #565656 !important;
+  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif !important;
+  line-height: 125% !important;
+  font-size: 1.3rem !important;
+}
+h1,h2,h3,h4,h5,h6,{
+  color: #565656 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+ 
+.ui-dialog{
+  width:300px !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+.ui-dialog-footer .ui-button {
+  font-size: 15px !important;
+  padding: 5px !important;
+  background: #43ac6a !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.ui-dialog-footer .ui-button + .ui-button {
+  font-size: 15px !important;
+  padding: 5px !important;
+  background: #f04124 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.ui-dialog-titlebar{
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 17px !important;
+  background: transparent !important;
+  border-bottom: 1px solid #D5D5D5 !important;
+}
+.ui-dialog-titlebar-icon{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+.ui-confirmdialog.ui-dialog .ui-dialog-content {
+  padding: 2em 2em !important;
+}
+
+.ui-widget{
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.landingBg{
+  background : url(/assets/images/login-bg13.jpg) no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+ }
+
+ .homeBg{
+  background : #fafafa !important;
+ }

@@ -1,0 +1,45 @@
+.saveBtn{
+    background-color: #428bca;
+        color: #fff;
+}
+.cancelBtn{
+    background-color: #e99002;
+        color: #fff;
+}
+.loginInput-full-width {
+        width: 100%;
+}
+.login-container {
+        display: flex;
+        flex-direction: column;
+}
+.login-container > * {
+        width: 100%;
+}
+.login-form {
+        min-width: 150px;
+        max-width: 745px;
+        width: 100%;
+}
+.message{
+        margin-bottom: 40px;
+}
+.formBg{
+        background-color: #ffffff; 
+        opacity: 0.9;
+        padding-bottom: 40px;
+        padding-top: 6px;
+        padding-left:50px;
+        padding-right: 50px;
+        margin-top: 60px;
+} 
+
+input{
+  font-size: 1.3em;
+  color: rgba(0,0,0,.87);
+}
+
+
+     
+
+      

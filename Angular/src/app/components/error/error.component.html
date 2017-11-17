@@ -1,0 +1,17 @@
+<!-- <div style="min-height:300px;" class="well">
+  <h1 class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> HTTP ERROR 404 NOT FOUND</h1><br>
+   <p class="ErrorMessage">{{errorMessage}}</p> 
+</div> -->
+
+<mat-card *ngIf="errorDetails; else reloadTamplate" class="backgroundImg">
+  <h1><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> HTTP ERROR {{errorDetails.status}} - {{errorDetails.statusText}}</h1><br>
+  <h3 class="ErrorMessage">Sorry, looks like something went wrong while displaying this webpage.</h3>
+  <button type="button" mat-raised-button class="backBtn" [routerLink]="['/home']"><i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i> &nbsp;Go Back to Home</button>  
+</mat-card>
+<ng-template #reloadTamplate>
+  <mat-card class="backgroundImg">
+    <h1><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Oops Error Occured!</h1><br>
+    <h3 class="ErrorMessage">It seems the page you are looking for has gone off the grid.</h3>  
+      <button type="button" mat-raised-button class="backBtn" [routerLink]="['/home']"><i class="fa fa-angle-double-left fa-lg" aria-hidden="true"></i> &nbsp;Go Back to Home</button>  
+  </mat-card>
+</ng-template>

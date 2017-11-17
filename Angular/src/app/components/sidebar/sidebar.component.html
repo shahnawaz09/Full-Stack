@@ -1,0 +1,20 @@
+<div class="col-md-2 sidebar" *ngIf="isLoggedIn">
+  <ul class="nav nav-sidebar">
+    <li [routerLinkActive]="['active']"><a [routerLink]="['/home']"><i class="fa fa-home fa-fw"></i>Home</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['/searchImages']"><i class="fa fa-picture-o fa-fw"></i>Image Search</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['/analytics']"><i class="fa fa-database fa-fw"></i>Analytics</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['/export']"><i class="fa fa-file-excel-o fa-fw"></i>Export</a></li>
+  </ul>
+  <ul class="nav nav-sidebar">
+    <li [routerLinkActive]="['active']"><a [routerLink]="['x']"><i class="fa fa-bar-chart-o fa-fw"></i>Reports</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['y']"><i class="fa fa-trophy fa-fw"></i>Awards</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['z']"><i class="fa fa-suitcase fa-fw"></i>Career</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['h']"><i class="fa fa-building-o fa-fw"></i>CEO Desk</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['n']"><i class="fa fa-plane fa-fw"></i>Success Stories</a></li>
+  </ul>
+  <ul class="nav nav-sidebar">
+    <li [routerLinkActive]="['active']"><a [routerLink]="['d']"><i class="fa fa-user fa-fw"></i>About</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['t']"><i class="fa fa-question fa-fw"></i>FAQ</a></li>
+    <li [routerLinkActive]="['active']"><a [routerLink]="['j']"><i class="fa fa-address-card fa-fw"></i>Contact Us</a></li>
+  </ul>
+</div>
